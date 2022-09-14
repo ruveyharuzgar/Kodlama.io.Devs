@@ -13,7 +13,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProgramminLanguagesController : BaseController
+    public class ProgrammingLanguagesController : BaseController
     {
         [HttpPost("add")]
         public async Task<IActionResult> Add([FromBody] CreateProgrammingLanguageCommand createProgrammingLanguageCommand)
@@ -22,7 +22,7 @@ namespace WebAPI.Controllers
             return Created("", result);
         }
 
-        [HttpPost("delete/" + "{Id}")]
+        [HttpPost("delete/{Id}")]
         public async Task<IActionResult> Delete([FromRoute] DeleteProgrammingLanguageCommand deleteProgrammingLanguageCommand)
         {
             DeletedProgrammingLanguageDto result = await Mediator.Send(deleteProgrammingLanguageCommand);
@@ -44,7 +44,7 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        [HttpGet("getbyid/" + "{Id}")]
+        [HttpGet("getbyid/{Id}")]
         public async Task<IActionResult> GetById([FromRoute] GetByIdProgrammingLanguageQuery getByIdProgrammingLanguageQuery)
         {
             ProgrammingLanguageGetByIdDto programmingLanguageGetByIdDto = await Mediator.Send(getByIdProgrammingLanguageQuery);

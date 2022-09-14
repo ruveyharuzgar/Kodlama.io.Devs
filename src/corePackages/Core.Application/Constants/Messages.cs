@@ -12,5 +12,11 @@ namespace Core.Application.Constants
         public static string ProgrammingLanguageCannotBeEmpty = "Programming Language cannot be empty.";
         public static string RequestedProgrammingLanguageIsNotAvailable = "Requested Programming Language is not available.";
         public static string NoProgrammingLanguage = "No Programming Language.";
+        public static string SameProgrammingTechnologyCannotBeAdded;
+        public static string RequestedProgrammingTechnologyIsNotAvailable;
+        public static string ProgrammingTechnologyCannotBeEmpty;
+        public static string ProgrammingLanguageIdCannotBeEmpty;
+        public static string ProgrammingTechnologyNameCannotBeEmpty;
+        public static string ProgrammingTechnologyIdCannotBeEmpty;
     }
 }
